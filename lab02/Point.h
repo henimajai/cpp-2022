@@ -15,7 +15,9 @@ public:
     Point( int x = 0, int y = 0);
     int getX() const;
     int getY() const;
-    void print()const;
+    void printP()const;
+    void setX(int x);
+    void setY(int y);
 
 };
 #endif //CPP_2022_POINT_H
