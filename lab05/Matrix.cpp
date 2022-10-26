@@ -26,10 +26,10 @@ Matrix::Matrix(const Matrix &what) {
     this->mRows = what.mRows;
     this->mCols = what.mCols;
     this->mElements = new double *[mRows];
-    for(int i = 0; i <mRows; ++i){
+    for(int i = 0; i < mRows; ++i){
         this->mElements[i] = new double[mCols];
     }
-    for(int i=0;i<mRows;++i){
+    for(int i = 0; i < mRows;++i){
         for(int j=0;j<mCols;++j){
             mElements[i][j] = what.mElements[i][j];
         }

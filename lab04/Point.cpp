@@ -3,6 +3,8 @@
 //
 
 #include "Point.h"
+int Point::counter{0};
+
 Point::Point(int x, int y) {
     if (x >= 0 && x <= M) this->x = x;
     else
@@ -10,7 +12,9 @@ Point::Point(int x, int y) {
     if (y >= 0 && y <= M) this->y = y;
     else
         this->y = 0;
+    counter++;
 }
+
 
 int Point::getX() const {
     return x;
@@ -23,4 +27,16 @@ int Point::getY() const {
 double Point::distanceTo(const Point &point) const {
 
 }
+
+Point::Point(const Point &what) {
+    this->x = what.x;
+    this->y = what.y;
+    counter++;
+}
+
+Point::~Point() {
+    counter--;
+}
+
+
 
