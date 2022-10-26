@@ -7,12 +7,11 @@
 #include <iostream>
 
 using namespace std;
-
-class Point{
+class Pont{
 private:
     int x, y;
 public:
-    Point( int x = 0, int y = 0);
+    Pont( int x = 0, int y = 0);
     int getX() const;
     int getY() const;
     void printP()const;
