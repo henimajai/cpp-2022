@@ -4,11 +4,12 @@
 
 #include "Employee.h"
 
-int Employee::counter = 0;
+int Employee::counter = 1;
 
 void Employee::print(ostream &os) const {
+    os << "Id: " << this->id << " ";
     Person::print(os);
-    os << " " << this->job << endl;
+    os << " " << this->job <<  " ";
 }
 
 Employee::Employee(const string &firstName, const string &lastName, int birthDate, const string &job) : Person(

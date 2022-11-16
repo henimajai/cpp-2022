@@ -3,7 +3,7 @@
 //
 
 #include "Manager.h"
-string Manager::MANAGER_JOB="Manager";
+const string Manager::MANAGER_JOB="Manager";
 Manager::Manager(const string& firstName,const string& lastName, int birthDate,const string& job) : Employee(firstName, lastName,birthDate, job) {
 
 }
@@ -20,7 +20,7 @@ void Manager::deleteEmployee(int id) {
     for(auto& emp:emps){
         index++;
         if(emp.getId() == id){
-            emps.erase(emps.cbegin()+index -1);
+            emps.erase(emps.cbegin()+index - 1);
         }
     }
 }
@@ -32,7 +32,7 @@ int Manager::numberOfEmployees() {
 void Manager::print(ostream &os) const {
     cout << MANAGER_JOB << " ";
     Employee::print(os);
-    cout << "beosztottjai:\n";
+    cout << "subordinates: \n";
     for(auto emp:emps){
         cout<<"\t";
         emp.print(os);

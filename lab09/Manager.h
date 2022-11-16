@@ -11,13 +11,15 @@
 class Manager : public Employee{
 private:
     vector<Employee> emps;
-    static string MANAGER_JOB;
+
 public:
+    static const string MANAGER_JOB;
     Manager(const string &firstName, const string &lastName, int birthDate, const string& job );
     void addEmployee(Employee* emp);
     void deleteEmployee(int id);
     int numberOfEmployees();
     void print(ostream &os) const override;
+    vector<Employee> getEmps(){return emps;};
 
 };
 
